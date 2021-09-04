@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - jugaad_product
+    - node
+  theme:
+    - bartik
+id: barcode
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: barcode
+settings:
+  id: barcode
+  label: Barcode
+  provider: jugaad_product
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      product: product
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

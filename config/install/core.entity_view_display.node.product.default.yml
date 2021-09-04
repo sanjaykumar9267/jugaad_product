@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.body
+    - field.field.node.product.field_image
+    - field.field.node.product.field_app_purchase_link
+    - image.style.large
+    - node.type.product
+  module:
+    - image
+    - text
+    - user
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  field_image:
+    type: image
+    weight: 10
+    region: content
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_app_purchase_link: true
+  langcode: true

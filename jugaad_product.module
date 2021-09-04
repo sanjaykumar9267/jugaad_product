@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function jugaad_product_theme($existing, $type, $theme, $path) {
+  return [
+    'barcode' => [
+      'variables' => ['barcode' => NULL],
+    ],
+  ];
+}
+  
